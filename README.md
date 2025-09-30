@@ -42,9 +42,13 @@ In your GitHub account:
 First add a `.npmrc` file to your root project with your token:
 
 ```ini
-@dynamicyield:registry=https://npm.pkg.github.com/
-//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+@OWNER:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
 ```
+
+Replace:
+- OWNER → the GitHub username (or org)
+- YOUR_GITHUB_TOKEN → your personal access token.
 
 ### Install Package
 
