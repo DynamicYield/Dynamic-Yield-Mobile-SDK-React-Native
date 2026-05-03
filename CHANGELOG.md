@@ -2,6 +2,55 @@
 
 # Changelog
 
+## [1.5.0] (2026-05-03)
+
+## Overview
+
+Version 1.5.0 adds **Active Consent Handling** to the React Native SDK and enhances **Semantic Search** with **spellcheck support**. 
+This release improves compliance control and delivers more forgiving search behavior for end users. 
+
+***
+
+## 🌟 New Features
+
+### **1. Active Consent Handling**
+
+The SDK now allows applications to explicitly control consent state during initialization and runtime. 
+
+**Key behavior** 
+- Consent is passed during SDK initialization 
+- Consent can be updated during the same session using async APIs 
+- Consent is **not stored** across app launches 
+- When consent is denied, consented tracking is disabled while still allowing non‑personalized campaigns 
+
+**Modes** 
+- Active Consent enabled 
+   → SDK respects the provided consent value 
+- Active Consent disabled
+   → SDK always behaves as if consent is granted 
+
+### **2. Semantic Search — Spellcheck Support**
+
+Semantic Search requests can now enable **spellcheck** on a per‑request basis. 
+
+When enabled: 
+- The original query is never modified 
+- Corrected and normalized queries are returned in the response payload 
+- Works with both .success and .warning result states 
+
+**Response fields** 
+- searchQuery 
+- spellCheckedQuery 
+- normalizedQuery 
+
+## ⚠️ Important Notes 
+
+- Consent must be re‑provided on every app launch 
+- Runtime consent changes apply only to the current session 
+- Spellcheck is opt‑in per Semantic Search request
+
+***
+
 ## [1.4.0] (2026-03-05)
 
 ## Overview
