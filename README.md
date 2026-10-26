@@ -14,7 +14,7 @@ For detailed implementation guides, SDK references, and troubleshooting, refer t
 
 ## Compatibility
 
-This library supports **React Native version 0.77.0 and above**.
+This library supports **React Native version 0.84.0 and above**.
 
 ## Installation prerequisites
 
